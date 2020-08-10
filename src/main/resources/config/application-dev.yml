@@ -17,14 +17,14 @@ logging:
   level:
     ROOT: DEBUG
     io.github.jhipster: DEBUG
-    org.regitiny.catiny.uaa: DEBUG
+    org.regitiny.catiny.gateway: DEBUG
 
 eureka:
   instance:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
+      defaultZone: http://admin:${jhipster.registry.password}@localhost:10200/eureka/
 
 management:
   health:
