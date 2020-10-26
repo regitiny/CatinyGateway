@@ -55,6 +55,7 @@ public class SecurityConfiguration extends ResourceServerConfigurerAdapter
       .and()
       .authorizeRequests()
       .antMatchers("/api/**").authenticated()
+      .antMatchers("/services/*/api/deep/**").denyAll() //This api is only used for local services .
       .antMatchers("/management/health").permitAll()
       .antMatchers("/management/info").permitAll()
       .antMatchers("/management/prometheus").permitAll()
